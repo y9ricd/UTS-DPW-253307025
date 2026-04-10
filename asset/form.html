@@ -1,87 +1,130 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Isi Formulir | PPDB Sekolah Global Nusantara</title>
-  <link rel="stylesheet" href="asset/css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran - PPDB Sekolah Global Nusantara</title>
+    <link rel="stylesheet" href="asset/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <header>
-    <h1>🎓 Penerimaan Peserta Didik Baru (PPDB)</h1>
-    <p>Sekolah Global Nusantara &mdash; Tahun Ajaran 2026/2027</p>
-  </header>
-
-  <nav>
-    <a href="index.html">Beranda</a>
-    <a href="alur.html">Alur Pendaftaran</a>
-    <a href="form.html" class="active">Isi Formulir</a>
-  </nav>
-
-  <main>
-    <div class="card">
-      <h2 class="section-title">Formulir Biodata Calon Siswa</h2>
-      <p class="section-desc">Mohon isi data berikut dengan benar sesuai dengan dokumen asli. Pastikan NIK yang dimasukkan terdiri dari 16 digit angka.</p>
-
-      <form id="formPendaftaran" onsubmit="return false;">
-
-        <!-- Nama Lengkap -->
-        <div class="form-group">
-          <label for="nama">Nama Lengkap Sesuai Ijazah/Akta:</label>
-          <input
-            type="text"
-            id="nama"
-            name="nama"
-            placeholder="Cth: Budi Santoso"
-            autocomplete="off"
-          />
+    <header class="main-header">
+        <div class="header-content">
+            <div class="brand">
+                <div class="logo-icon">🏫</div>
+                <div class="brand-text">
+                    <h1>PPDB 2026/2027</h1>
+                    <p>Sekolah Global Nusantara</p>
+                </div>
+            </div>
         </div>
+    </header>
 
-        <!-- NIK -->
-        <div class="form-group">
-          <label for="nik">Nomor Induk Kependudukan (NIK – 16 Digit):</label>
-          <input
-            type="number"
-            id="nik"
-            name="nik"
-            placeholder="16 Digit NIK"
-            autocomplete="off"
-          />
+    <nav class="main-nav">
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Beranda</a></li>
+            <li><a href="alur.html" class="nav-link">Alur Pendaftaran</a></li>
+            <li><a href="form.html" class="nav-link active nav-cta">Isi Formulir</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <section class="form-section">
+            <div class="form-container">
+                <div class="form-header">
+                    <div class="form-icon">📝</div>
+                    <h2 class="form-title">Formulir Biodata Calon Siswa</h2>
+                    <p class="form-subtitle">Mohon isi data berikut dengan benar sesuai dokumen asli</p>
+                </div>
+
+                <form id="ppdbForm" class="modern-form">
+                    <div class="form-group">
+                        <label for="nama" class="form-label">
+                            <span class="label-icon">👤</span>
+                            Nama Lengkap Sesuai Ijazah/Akta
+                        </label>
+                        <input 
+                            type="text" 
+                            id="nama" 
+                            name="nama" 
+                            class="form-input" 
+                            placeholder="Contoh: Budi Santoso"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nik" class="form-label">
+                            <span class="label-icon">🆔</span>
+                            Nomor Induk Kependudukan (NIK - 16 Digit)
+                        </label>
+                        <input 
+                            type="number" 
+                            id="nik" 
+                            name="nik" 
+                            class="form-input" 
+                            placeholder="Masukkan 16 digit NIK"
+                            required
+                        >
+                        <div class="nik-counter">
+                            <span id="nikCount">0</span>/16 digit
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="jalur" class="form-label">
+                            <span class="label-icon">🎯</span>
+                            Jalur Pendaftaran
+                        </label>
+                        <div class="select-wrapper">
+                            <select id="jalur" name="jalur" class="form-select" required>
+                                <option value="" disabled selected>-- Pilih Jalur Pendaftaran --</option>
+                                <option value="zonasi">🗺️ Jalur Zonasi (Berdasarkan domisili)</option>
+                                <option value="prestasi">🏆 Jalur Prestasi (Nilai akademik & non-akademik)</option>
+                                <option value="afirmasi">💚 Jalur Afirmasi (Ekonomi berkebutuhan khusus)</option>
+                                <option value="perpindahan">🚚 Jalur Perpindahan Tugas Orang Tua</option>
+                            </select>
+                            <span class="select-arrow">▼</span>
+                        </div>
+                    </div>
+
+                    <div class="form-info-box">
+                        <div class="info-icon">ℹ️</div>
+                        <div class="info-text">
+                            <strong>Perhatian:</strong> Pastikan semua data yang diisi sesuai dengan dokumen asli. 
+                            Data yang tidak valid dapat menyebabkan penolakan pendaftaran.
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-submit" id="submitBtn">
+                        <span class="btn-text">Kirim Pendaftaran</span>
+                        <span class="btn-loader" style="display: none;">
+                            <svg class="spinner" viewBox="0 0 50 50">
+                                <circle cx="25" cy="25" r="20" fill="none" stroke="currentColor" stroke-width="5"></circle>
+                            </svg>
+                            Memproses...
+                        </span>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Toast Notification Container -->
+    <div id="toast" class="toast">
+        <div class="toast-icon" id="toastIcon">✅</div>
+        <div class="toast-content">
+            <div class="toast-title" id="toastTitle">Berhasil!</div>
+            <div class="toast-message" id="toastMessage">Pendaftaran berhasil dikirim</div>
         </div>
-
-        <!-- Jalur Pendaftaran -->
-        <div class="form-group">
-          <label for="jalur">Jalur Pendaftaran:</label>
-          <select id="jalur" name="jalur">
-            <option value="">-- Pilih Jalur --</option>
-            <option value="zonasi">Zonasi</option>
-            <option value="prestasi">Prestasi</option>
-            <option value="afirmasi">Afirmasi</option>
-            <option value="mutasi">Mutasi / Perpindahan Orang Tua</option>
-          </select>
-        </div>
-
-        <!-- Tombol Submit -->
-        <button
-          type="button"
-          class="btn-submit"
-          onclick="submitPendaftaran()"
-        >
-          Kirim Pendaftaran
-        </button>
-
-      </form>
+        <div class="toast-progress" id="toastProgress"></div>
     </div>
-  </main>
 
-  <footer>
-    <p>&copy; 2026 <span>Sekolah Global Nusantara</span>. Terakreditasi A.</p>
-  </footer>
+    <footer class="main-footer">
+        <p>&copy; 2026 Sekolah Global Nusantara. Terakreditasi A.</p>
+        <p class="footer-sub">Jl. Pendidikan No. 123, Kota Madiun, Jawa Timur</p>
+    </footer>
 
-  <!-- Toast Notification -->
-  <div id="toast"></div>
-
-  <script src="asset/javascript/script.js"></script>
+    <script src="asset/javascript/script.js"></script>
 </body>
 </html>

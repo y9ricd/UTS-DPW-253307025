@@ -1,81 +1,135 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Beranda | PPDB Sekolah Global Nusantara</title>
-  <link rel="stylesheet" href="asset/css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - PPDB Sekolah Global Nusantara</title>
+    <link rel="stylesheet" href="asset/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="brand">
+                <div class="logo-icon">🏫</div>
+                <div class="brand-text">
+                    <h1>PPDB 2026/2027</h1>
+                    <p>Sekolah Global Nusantara</p>
+                </div>
+            </div>
+        </div>
+    </header>
 
-  <header>
-    <h1>🎓 Penerimaan Peserta Didik Baru (PPDB)</h1>
-    <p>Sekolah Global Nusantara &mdash; Tahun Ajaran 2026/2027</p>
-  </header>
+    <nav class="main-nav">
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link active">Beranda</a></li>
+            <li><a href="alur.html" class="nav-link">Alur Pendaftaran</a></li>
+            <li><a href="form.html" class="nav-link nav-cta">Isi Formulir</a></li>
+        </ul>
+    </nav>
 
-  <nav>
-    <a href="index.html" class="active">Beranda</a>
-    <a href="alur.html">Alur Pendaftaran</a>
-    <a href="form.html">Isi Formulir</a>
-  </nav>
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="hero-badge">✨ Tahun Ajaran 2026/2027</div>
+            <h2 class="hero-title">Selamat Datang di Portal<br><span class="gradient-text">Penerimaan Peserta Didik Baru</span></h2>
+            <p class="hero-subtitle">
+                Bergabunglah dengan institusi pendidikan terbaik untuk masa depan gemilang anak Anda. 
+                Pendaftaran mudah, transparan, dan berkualitas.
+            </p>
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <span class="stat-number">25+</span>
+                    <span class="stat-label">Tahun Berpengalaman</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">5000+</span>
+                    <span class="stat-label">Alumni Sukses</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">A</span>
+                    <span class="stat-label">Akreditasi</span>
+                </div>
+            </div>
+        </section>
 
-  <main>
-    <div class="welcome-box">
-      <h2>Selamat Datang!</h2>
-      <p>Selamat datang di Portal Resmi Penerimaan Peserta Didik Baru (PPDB) Sekolah Global Nusantara. 
-         Silakan simak informasi mengenai proses dan jadwal pendaftaran secara cermat dari tabel di bawah ini.</p>
-    </div>
+        <section class="schedule-section">
+            <div class="section-header">
+                <div class="section-icon">📅</div>
+                <h3>Jadwal Pelaksanaan PPDB</h3>
+                <p class="section-desc">Jadwal lengkap seleksi penerimaan peserta didik baru</p>
+            </div>
+            
+            <div class="table-container">
+                <table class="modern-table">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Kegiatan</th>
+                            <th>Tanggal Pelaksanaan</th>
+                            <th>Keterangan</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><strong>Pendaftaran Online</strong></td>
+                            <td>15 - 30 Juni 2026</td>
+                            <td>Pengisian formulir dan upload dokumen</td>
+                            <td><span class="status-badge active">Aktif</span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><strong>Verifikasi Berkas</strong></td>
+                            <td>1 - 10 Juli 2026</td>
+                            <td>Peninjauan dokumen oleh tim verifikator</td>
+                            <td><span class="status-badge pending">Menunggu</span></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><strong>Tes Seleksi</strong></td>
+                            <td>15 Juli 2026</td>
+                            <td>Tes akademik dan wawancara</td>
+                            <td><span class="status-badge pending">Menunggu</span></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><strong>Pengumuman Hasil</strong></td>
+                            <td>20 Juli 2026</td>
+                            <td>Pengumuman kelulusan via website</td>
+                            <td><span class="status-badge pending">Menunggu</span></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><strong>Daftar Ulang</strong></td>
+                            <td>22 - 25 Juli 2026</td>
+                            <td>Pembayaran dan pengambilan raport</td>
+                            <td><span class="status-badge pending">Menunggu</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
 
-    <div class="card">
-      <h2 class="section-title">Jadwal Pelaksanaan PPDB</h2>
-      <p class="section-desc">Berikut adalah timeline dan jadwal seluruh tahapan seleksi penerimaan peserta didik baru tahun ajaran 2026/2027.</p>
+        <section class="cta-section">
+            <div class="cta-card">
+                <h4>Siap Mendaftar?</h4>
+                <p>Langkah pertama menuju masa depan cerah dimulai sekarang.</p>
+                <a href="form.html" class="btn-primary">
+                    <span>Mulai Pendaftaran</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </section>
+    </main>
 
-      <div class="table-wrapper">
-        <table>
-          <thead>
-            <tr>
-              <th>Kegiatan</th>
-              <th>Jadwal Pelaksanaan</th>
-              <th>Keterangan</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Sosialisasi PPDB</td>
-              <td>01 April – 15 April 2026</td>
-              <td>Penyebaran informasi secara online dan ke sekolah asal</td>
-            </tr>
-            <tr>
-              <td>Pendaftaran Online (Zonasi &amp; Prestasi)</td>
-              <td>01 Mei – 15 Mei 2026</td>
-              <td>Melalui portal online (halaman Isi Formulir)</td>
-            </tr>
-            <tr>
-              <td>Verifikasi Berkas</td>
-              <td>16 Mei – 25 Mei 2026</td>
-              <td>Pengecekan dokumen pendukung oleh panitia</td>
-            </tr>
-            <tr>
-              <td>Pengumuman Hasil Seleksi</td>
-              <td>05 Juni 2026</td>
-              <td>Dapat dilihat pada menu Pengumuman</td>
-            </tr>
-            <tr>
-              <td>Daftar Ulang</td>
-              <td>06 Juni – 10 Juni 2026</td>
-              <td>Calon peserta didik yang diterima wajib lapor diri</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </main>
+    <footer class="main-footer">
+        <p>&copy; 2026 Sekolah Global Nusantara. Terakreditasi A.</p>
+        <p class="footer-sub">Jl. Pendidikan No. 123, Kota Madiun, Jawa Timur</p>
+    </footer>
 
-  <footer>
-    <p>&copy; 2026 <span>Sekolah Global Nusantara</span>. Terakreditasi A.</p>
-  </footer>
-
-  <div id="toast"></div>
-  <script src="asset/javascript/script.js"></script>
+    <script src="asset/javascript/script.js"></script>
 </body>
 </html>
