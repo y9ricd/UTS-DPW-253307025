@@ -1,7 +1,4 @@
-// ============================================
-// PPDB Portal — script.js
-// Toast Notification & Form Validation
-// ============================================
+
 
 function showToast(message, type = 'success') {
   const toast = document.getElementById('toast');
@@ -59,7 +56,7 @@ function submitPendaftaran() {
   jalur.value = '';
 }
 
-// Highlight active nav link
+
 document.addEventListener('DOMContentLoaded', () => {
   const page = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('nav a').forEach(a => {
